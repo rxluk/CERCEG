@@ -1,0 +1,11 @@
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+}
+.topbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
