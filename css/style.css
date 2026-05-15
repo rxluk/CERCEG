@@ -1,0 +1,71 @@
+* {
+    background-color: #F7F5F0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 330px 20px 330px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(30,42,36,0.06);
+}
+.hero * {
+    background-color: white;
+}
+.hero .left {
+    padding-left: 70px;
+    
+}
+.hero img {
+    height: 500px;
+    padding: 0;
+    background-color: transparent;
+}
+
+.cards {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin: 0 360px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px 70px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(30,42,36,0.06);
+    width: 150px;
+}
+
+.card img {
+    background-color: #DDE8D8;
+    padding: 20px;
+    border-radius: 50%;
+    height: 35px;
+    width: auto;
+    margin-bottom: 20px;
+}
+.card h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #1E2A24;
+    font-weight: semi-bold;
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+}
+.card p {
+    color: #7E8A83;
+    font-weight: medium;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+}
