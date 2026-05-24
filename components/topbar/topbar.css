@@ -36,17 +36,31 @@
     font-size: clamp(0.9rem, 1vw, 1rem);
 }
 
-.topbar button {
+.topbar .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: #54744c;
     color: white;
+    text-decoration: none;
+
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 20px;
-    height: 50px;
 
+    height: 50px;
     width: clamp(160px, 18vw, 200px);
+
     margin-right: clamp(1rem, 6vw, 120px);
+
+    transition: 0.2s ease;
+}
+
+.topbar .btn:hover {
+    background-color: #46663f;
+    transform: translateY(-1px);
 }
 
 h1 {
