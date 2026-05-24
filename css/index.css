@@ -1,25 +1,9 @@
-html {
-    scroll-behavior: smooth;
-}
-body {
-    background-color: #FAF9F6;
-}
-
-body {
-    font-family: "Inter Tight", sans-serif;
-    font-optical-sizing: auto;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
 .hero {
     display: flex;
     align-items: stretch;
     width: 100%;
     margin: 0 auto;
     padding: 0 2rem;
-    box-sizing: border-box;
 }
 
 .hero .left,
@@ -29,70 +13,19 @@ body {
     width: 100%;
 }
 
-.hero .left .tag {
-    display: inline-flex;
-    align-items: center;
-    color: #54744c;
-    font-weight: 500;
-    font-size: 0.875rem;
-    margin-top: 2%;
-    border-radius: 1.25rem;
-    background-color: #DDE8D8;
-    padding: 1% 1%;
-}
-
-.hero .left h1 {
-    color: #1E2A24;
-    font-weight: 600;
-    font-size: clamp(1rem, 6vw, 5rem);
-    margin-top: 2%;
-    background-color: transparent;
-}
-
-.hero .left h1 span {
-    color: #54744c;
-}
-
-.hero .left .description {
-    display: inline-flex;
-    color: #7E8A83;
-    font-weight: 500;
-    font-size: 0.875rem;
-    margin-top: 3%;
-    background-color: transparent;
-}
-
-.hero .left .btn {
+.hero .left {
     display: flex;
-    gap: 1.25rem;
-    width: 100%;
-    background-color: transparent;
-    margin-top: 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 6%;
+    margin-bottom: 5%;
 }
 
-.hero .left .btn .green,
-.hero .left .btn .white {
-    flex: 1 1 20rem;
-    min-width: 14rem;
-    width: 100%;
-    height: 4.375rem;
-    font-weight: 600;
-}
-
-.hero .left .btn .green {
-    background-color: #54744c;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-}
-
-.hero .left .btn .white {
-    background-color: white;
-    color: #54744c;
-    border: 2px solid #54744c;
-    border-radius: 0.5rem;
-    cursor: pointer;
+.hero .right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 7%;
 }
 
 .hero img {
@@ -100,70 +33,131 @@ body {
     max-width: 95%;
     height: auto;
     object-fit: contain;
-    padding: 0;
 }
 
-.hero .left {
-    flex: 1;
+.hero .left .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 1%;
+
+    color: #54744c;
+    background-color: #DDE8D8;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    border-radius: 1.25rem;
+    margin-top: 2%;
+}
+
+.hero .left h1 {
+    margin-top: 2%;
+
+    color: #1E2A24;
+    font-size: clamp(1rem, 6vw, 5rem);
+    font-weight: 600;
+}
+
+.hero .left h1 span {
+    color: #54744c;
+}
+
+.hero .left .description {
+    margin-top: 3%;
+
+    color: #7E8A83;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.hero .left .btn {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 5%;
-    margin-left: 6%;
+    gap: 1.25rem;
+    width: 100%;
+    margin-top: 5%;
 }
 
-.hero .right {
-    flex: 1;
+.hero .left .btn .green,
+.hero .left .btn .white {
     display: flex;
     justify-content: center;
-    margin-right: 7%;
-    align-items: flex-start;
+    align-items: center;
+    text-decoration: none;
+
+    flex: 1 1 20rem;
+    min-width: 14rem;
+    height: 4.375rem;
+
+    font-weight: 600;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.hero .left .btn .green {
+    background-color: #54744c;
+    color: white;
+    border: none;
+}
+
+.hero .left .btn .white {
+    background-color: white;
+    color: #54744c;
+    border: 2px solid #54744c;
 }
 
 .cards {
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
     justify-content: center;
-    flex-wrap: wrap ;
+    gap: 1rem;
+
     margin: 10% 0;
-    border: 0;
 }
 
 .card {
+    flex: 1 1 160px;
+    min-width: 140px;
+    max-width: 220px;
+
+    text-align: center;
     background-color: white;
     border-radius: 20px;
-    text-align: center;
+
     box-shadow: 0 8px 30px rgba(30,42,36,0.06);
-    flex: 1 1 160px;
-    max-width: 220px;
-    min-width: 140px;
 }
 
 .card img {
-    background-color: #DDE8D8;
-    margin-top: 15px;
+    display: block;
+    margin: 15px auto 0 auto;
+
+    width: 40px;
+    height: 40px;
     padding: 10px;
+
+    object-fit: contain;
+
+    background-color: #DDE8D8;
     border-radius: 50%;
-    height: 20px;
-    width: auto;
 }
 
 .card h2 {
     margin-bottom: 15px;
-    font-size: 1.5em;
+
     color: #54744c;
-    font-weight: 700;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
-    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+
     background-color: white;
 }
 
 .card p {
     color: #7E8A83;
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
-    background-color: white;
+    font-family: "Poppins", sans-serif;
     font-size: 12px;
+    font-weight: 500;
+
+    background-color: white;
 }
 
 .about {
@@ -171,135 +165,141 @@ body {
     align-items: stretch;
 }
 
-.about .left {
+.about .left,
+.about .right {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 5%;
+}
+
+.about .left {
     margin-left: 6%;
+    margin-bottom: 5%;
 }
 
 .about .left img {
     max-width: 100%;
     height: auto;
-    padding: 0 0 70px 0;
+    padding-bottom: 70px;
 }
 
 .about .right {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-right: 7%;
+
     margin-left: 4%;
+    margin-right: 7%;
 }
 
 .about .right h2 {
+    margin: 12px 0 20px;
+
     color: #54744c;
     font-size: 24px;
     font-weight: 600;
-    margin: 12px 0 20px 0;
-    background-color: transparent;
 }
 
 .about .right h3 {
+    margin: 0 0 20px;
+
     color: #1E2A24;
     font-size: 70px;
     font-weight: 600;
-    margin: 0 0 20px 0;
-    background-color: transparent;
 }
+
 .about .right span {
-    display: inline-flex;
+    margin-bottom: 20px;
+
     color: #7E8A83;
-    font-weight: 500;
     font-size: 18px;
-    margin: 0 0 20px 0;
-    background-color: transparent;
-    align-items: center;
-    justify-content: center;
+    font-weight: 500;
 }
 
 .about .right .btn {
-    background-color: #54744c;
-    color: white;
+    margin: 15px 0 50px;
+
+    height: 45px;
+    padding: 0 24px;
+
     border: none;
     border-radius: 8px;
+
+    background-color: #54744c;
+    color: white;
+
     cursor: pointer;
     font-weight: 600;
-    height: 45px;
-    margin: 15px 0 50px 0;
 }
+
 .how-it-works {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
 }
+
 .how-it-works h2 {
+    margin: 12px 0 20px;
+
     color: #54744c;
     font-size: 24px;
-    justify-content: center;
     font-weight: 600;
-    margin: 12px 0 20px 0;
 }
 
 .how-it-works h3 {
+    margin: 0 0 30px;
+
     color: #1E2A24;
     font-size: 42px;
     font-weight: 600;
-    margin: 0 0 30px 0;
-    justify-content: center;
 }
 
 .how-it-works .steps {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
     justify-content: center;
+    gap: 1.5rem;
+
     width: 100%;
     padding: 0 2rem 120px;
-    box-sizing: border-box;
 }
 
-.how-it-works .steps .step {
+.how-it-works .step {
+    flex: 1 1 260px;
+    min-width: 220px;
+    max-width: 300px;
+
+    text-align: center;
     background-color: white;
     border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 8px 30px rgba(30,42,36,0.06);
 
-    flex: 1 1 260px;
-    max-width: 300px;
-    min-width: 220px;
+    box-shadow: 0 8px 30px rgba(30,42,36,0.06);
 }
 
-.how-it-works img {
-    background-color: #DDE8D8;
-    justify-content: center;
+.how-it-works .step img {
     margin-top: 15px;
     padding: 10px;
-    border-radius: 50%;
+
     height: 35px;
-    width: auto;
+
+    background-color: #DDE8D8;
+    border-radius: 50%;
 }
 
-.how-it-works .steps .step h4 {
+.how-it-works .step h4 {
     margin-bottom: 15px;
-    font-size: 1.5em;
+
     color: #54744c;
-    font-weight: 700;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
-    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+
     background-color: white;
 }
 
-.how-it-works .steps .step p {
+.how-it-works .step p {
     color: #7E8A83;
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
-    background-color: white;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
+    font-weight: 500;
+
+    background-color: white;
 }

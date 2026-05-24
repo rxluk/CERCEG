@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação - CERCEG</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="components/topbar/topbar.css">
+    <link rel="stylesheet" href="components/footer/footer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="topbar">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Logo CERCEG">
+                <div class="title">
+                    <h1>CERCEG</h1>
+                    <span class="title-light">
+                        Centro de recuperação<br>
+                        de cães e gatos
+                    </span>
+                </div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html#inicio">Início</a></li>
+                    <li><a href="index.html#sobre">Sobre nós</a></li>
+                    <li><a href="index.html#como-funciona">Como funciona</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#footer">Contato</a></li>
+                </ul>
+            </nav>
+
+            <button class="btn">Quero ajudar</button>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="form-hero">
+            <div class="left">
+                <p class="tag">SOLICITAÇÃO</p>
+
+                <h2>
+                    Solicite a castração<br>
+                    ou recuperação do seu pet
+                </h2>
+
+                <p class="description">
+                    Preencha o formulário abaixo para que nossa equipe
+                    possa avaliar e entrar em contato com você.
+                </p>
+            </div>
+
+            <div class="right">
+                <img src="assets/hero-image.png"
+                     alt="Cachorro e gato">
+            </div>
+        </section>
+
+
+        <section class="form-container">
+
+            <form action="#" method="post">
+
+                <h3>Dados do tutor</h3>
+
+                <div class="form-row">
+                    <input
+                        type="text"
+                        name="nome"
+                        placeholder="Nome completo"
+                        required
+                    >
+
+                    <input
+                        type="tel"
+                        name="telefone"
+                        placeholder="Telefone / WhatsApp"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="E-mail"
+                        required
+                    >
+                </div>
+
+                <div class="form-row">
+                    <input
+                        type="text"
+                        name="cidade"
+                        placeholder="Cidade"
+                        required
+                    >
+                </div>
+
+
+                <h3>Dados do animal</h3>
+
+                <div class="form-row">
+                    <input
+                        type="text"
+                        name="pet"
+                        placeholder="Nome do animal"
+                        required
+                    >
+
+                    <select name="especie" required>
+                        <option value="">Espécie</option>
+                        <option>Cachorro</option>
+                        <option>Gato</option>
+                    </select>
+
+                    <input
+                        type="text"
+                        name="raca"
+                        placeholder="Raça"
+                    >
+                </div>
+
+
+                <div class="form-row">
+                    <input
+                        type="number"
+                        name="idade"
+                        placeholder="Idade"
+                    >
+
+                    <select name="sexo">
+                        <option value="">Sexo</option>
+                        <option>Macho</option>
+                        <option>Fêmea</option>
+                    </select>
+
+                    <input
+                        type="text"
+                        name="peso"
+                        placeholder="Peso"
+                    >
+                </div>
+
+
+                <div class="form-row">
+                    <select name="situacao">
+                        <option value="">
+                            Situação atual do animal
+                        </option>
+                        <option>Saudável</option>
+                        <option>Ferido</option>
+                        <option>Abandonado</option>
+                    </select>
+                </div>
+
+
+                <div class="form-row">
+                    <textarea
+                        name="observacoes"
+                        rows="5"
+                        placeholder="Observações"
+                    ></textarea>
+                </div>
+
+
+                <div class="form-row">
+                    <label>
+                        Foto do animal (opcional)
+                    </label>
+
+                    <input
+                        type="file"
+                        name="foto"
+                        accept="image/*"
+                    >
+                </div>
+
+
+                <div class="form-buttons">
+                    <a href="index.html" class="back">
+                        Voltar
+                    </a>
+
+                    <button type="submit">
+                        Enviar solicitação
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <p>© 2026 CERCEG - Centro de recuperação de cães e gatos</p>
+
+        <a href="https://github.com/rxluk/CERCEG/">
+            GitHub
+        </a>
+        <br>
+        <a href="https://rxluk.github.io/">
+            Lucas Gabriel Costa
+        </a>
+    </footer>
+
+</body>
+</html>
