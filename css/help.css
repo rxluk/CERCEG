@@ -1,0 +1,138 @@
+.help-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 4% 8% 2% 8%;
+}
+
+.help-hero .tag {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 12px;
+    border-radius: 20px;
+
+    background-color: #DDE8D8;
+    color: #54744c;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.help-hero h2 {
+    margin-top: 20px;
+
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 600;
+
+    color: #1E2A24;
+}
+
+.help-hero .description {
+    margin-top: 10px;
+
+    font-size: 1rem;
+    color: #7E8A83;
+
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.help-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 1.5rem;
+
+    padding: 3% 6% 8% 6%;
+}
+
+.help-card {
+    flex: 1 1 280px;
+    max-width: 340px;
+
+    background-color: white;
+    border-radius: 20px;
+
+    padding: 24px;
+
+    box-shadow: 0 8px 30px rgba(30, 42, 36, 0.06);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.help-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(30, 42, 36, 0.12);
+}
+
+.help-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    color: #54744c;
+
+    margin-bottom: 10px;
+}
+
+.help-card p {
+    color: #7E8A83;
+    font-size: 0.95rem;
+    line-height: 1.4;
+
+    margin-bottom: 12px;
+}
+
+.help-card ul {
+    padding-left: 18px;
+    margin-bottom: 15px;
+}
+
+.help-card ul li {
+    color: #7E8A83;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.pix-box {
+    background-color: #F3F7F2;
+
+    padding: 12px;
+    border-radius: 12px;
+
+    font-weight: 600;
+    color: #1E2A24;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #DDE8D8;
+}
+
+.help-card button {
+    margin-top: auto;
+
+    height: 44px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #54744c;
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.help-card button:hover {
+    background-color: #46663f;
+    transform: translateY(-2px);
+}
