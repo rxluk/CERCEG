@@ -1,0 +1,173 @@
+.form-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 3rem 8%;
+    box-sizing: border-box;
+}
+
+.form-hero .left,
+.form-hero .right {
+    flex: 1;
+}
+
+.form-hero .tag {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 0.5rem 1rem;
+
+    background-color: #DDE8D8;
+    color: #54744c;
+
+    border-radius: 1.25rem;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.form-hero h2 {
+    margin: 1rem 0;
+
+    color: #1E2A24;
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 600;
+}
+
+.form-hero .description {
+    color: #7E8A83;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.form-hero .right {
+    display: flex;
+    justify-content: center;
+}
+
+.form-hero .right img {
+    max-width: 85%;
+    height: auto;
+}
+
+.form-container {
+    width: 100%;
+    padding: 0 8% 5rem;
+    box-sizing: border-box;
+}
+
+.form-container form {
+    background-color: white;
+
+    padding: 3rem;
+
+    border-radius: 24px;
+
+    box-shadow: 0 8px 30px rgba(30,42,36,0.06);
+}
+
+.form-container h3 {
+    color: #1E2A24;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+.form-container h3:first-child {
+    margin-top: 0;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    flex: 1 1 250px;
+
+    padding: 1rem;
+
+    border: 1px solid #d9d9d9;
+    border-radius: 12px;
+
+    font-family: "Inter Tight", sans-serif;
+    font-size: 1rem;
+
+    outline: none;
+}
+
+.form-row textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    border-color: #54744c;
+}
+
+.form-row label {
+    width: 100%;
+    margin-bottom: 0.5rem;
+
+    color: #54744c;
+    font-weight: 600;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 3rem;
+}
+
+.form-buttons .back {
+    text-decoration: none;
+
+    padding: 1rem 2rem;
+
+    border: 2px solid #54744c;
+    border-radius: 10px;
+
+    color: #54744c;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.form-buttons .back:hover {
+    background-color: #54744c;
+    color: white;
+}
+
+.form-buttons button {
+    border: none;
+
+    padding: 1rem 2rem;
+
+    border-radius: 10px;
+
+    background-color: #54744c;
+    color: white;
+
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.form-buttons button:hover {
+    opacity: 0.9;
+}
