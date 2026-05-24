@@ -1,0 +1,26 @@
+footer {
+    background-color: #54744c;
+    color: white;
+    text-align: center;
+    padding: 1rem 1rem; /* antes 2rem */
+    font-family: 'Poppins', sans-serif;
+}
+
+footer p {
+    margin: 0 0 0.5rem 0;
+    background: transparent;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    background: transparent;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
