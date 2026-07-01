@@ -1,6 +1,6 @@
 footer {
-    background-color: #54744c;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--surface-color);
     text-align: center;
     padding: 1rem 1rem; /* antes 2rem */
     font-family: 'Poppins', sans-serif;
@@ -13,7 +13,7 @@ footer p {
 }
 
 footer a {
-    color: white;
+    color: var(--surface-color);
     text-decoration: none;
     margin: 0 0.5rem;
     background: transparent;

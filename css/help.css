@@ -13,8 +13,8 @@
     padding: 6px 12px;
     border-radius: 20px;
 
-    background-color: #DDE8D8;
-    color: #54744c;
+    background-color: var(--secondary-surface-color);
+    color: var(--primary-color);
 
     font-size: 0.85rem;
     font-weight: 600;
@@ -26,14 +26,14 @@
     font-size: clamp(1.8rem, 4vw, 3rem);
     font-weight: 600;
 
-    color: #1E2A24;
+    color: var(--text-color);
 }
 
 .help-hero .description {
     margin-top: 10px;
 
     font-size: 1rem;
-    color: #7E8A83;
+    color: var(--text-muted-color);
 
     max-width: 600px;
     line-height: 1.5;
@@ -53,12 +53,12 @@
     flex: 1 1 280px;
     max-width: 340px;
 
-    background-color: white;
+    background-color: var(--surface-color);
     border-radius: 20px;
 
     padding: 24px;
 
-    box-shadow: 0 8px 30px rgba(30, 42, 36, 0.06);
+    box-shadow: 0 8px 30px var(--shadow-color);
 
     display: flex;
     flex-direction: column;
@@ -76,13 +76,13 @@
     font-size: 1.2rem;
     font-weight: 600;
 
-    color: #54744c;
+    color: var(--primary-color);
 
     margin-bottom: 10px;
 }
 
 .help-card p {
-    color: #7E8A83;
+    color: var(--text-muted-color);
     font-size: 0.95rem;
     line-height: 1.4;
 
@@ -95,23 +95,23 @@
 }
 
 .help-card ul li {
-    color: #7E8A83;
+    color: var(--text-muted-color);
     font-size: 0.95rem;
     margin-bottom: 6px;
 }
 
 .pix-box {
-    background-color: #F3F7F2;
+    background-color: var(--secondary-surface-color);
 
     padding: 12px;
     border-radius: 12px;
 
     font-weight: 600;
-    color: #1E2A24;
+    color: var(--text-color);
 
     margin-bottom: 12px;
 
-    border: 1px solid #DDE8D8;
+    border: 1px solid var(--border-color);
 }
 
 .help-card button {
@@ -122,8 +122,8 @@
     border: none;
     border-radius: 10px;
 
-    background-color: #54744c;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--surface-color);
 
     font-weight: 600;
 
@@ -133,6 +133,6 @@
 }
 
 .help-card button:hover {
-    background-color: #46663f;
+    background-color: var(--primary-hover-color);
     transform: translateY(-2px);
 }

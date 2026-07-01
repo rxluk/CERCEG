@@ -2,6 +2,32 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --bg-color: #faf9f6;
+    --surface-color: #ffffff;
+    --text-color: #1e2a24;
+    --text-muted-color: #7e8a83;
+    --primary-color: #54744c;
+    --primary-hover-color: #46663f;
+    --secondary-surface-color: #dde8d8;
+    --border-color: #d9d9d9;
+    --focus-color: #1a73e8;
+    --shadow-color: rgba(30, 42, 36, 0.06);
+}
+
+.high-contrast {
+    --bg-color: #000000;
+    --surface-color: #000000;
+    --text-color: #ffffff;
+    --text-muted-color: #f2f2f2;
+    --primary-color: #ffff00;
+    --primary-hover-color: #ffd700;
+    --secondary-surface-color: #1a1a1a;
+    --border-color: #ffffff;
+    --focus-color: #00e5ff;
+    --shadow-color: rgba(255, 255, 255, 0.2);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -11,8 +37,14 @@ body {
     padding: 0;
     overflow-x: hidden;
 
-    background-color: #FAF9F6;
+    background-color: var(--bg-color);
 
     font-family: "Inter Tight", sans-serif;
     font-optical-sizing: auto;
+    color: var(--text-color);
+}
+
+:focus-visible {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 3px;
 }
