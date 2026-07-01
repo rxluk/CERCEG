@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     width: 100%;
     padding: 3rem 8%;
@@ -19,7 +20,7 @@
 
     padding: 0.5rem 1rem;
 
-    background-color: var(--secondary-surface-color);
+    font-size: calc(0.875rem * var(--font-scale));
     color: var(--primary-color);
 
     border-radius: 1.25rem;
@@ -32,13 +33,13 @@
     margin: 1rem 0;
 
     color: var(--text-color);
-    font-size: clamp(2rem, 4vw, 4rem);
+    font-size: calc(clamp(2rem, 4vw, 4rem) * var(--font-scale));
     font-weight: 600;
 }
 
 .form-hero .description {
     color: var(--text-muted-color);
-    font-size: 1rem;
+    font-size: calc(1rem * var(--font-scale));
     font-weight: 500;
     line-height: 1.6;
 }
@@ -71,7 +72,7 @@
 
 .form-container h3 {
     color: var(--text-color);
-    font-size: 1.5rem;
+    font-size: calc(1.5rem * var(--font-scale));
     font-weight: 600;
 
     margin-bottom: 1.5rem;
@@ -129,6 +130,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 
     margin-top: 3rem;
 }

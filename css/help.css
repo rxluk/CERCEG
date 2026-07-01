@@ -16,14 +16,14 @@
     background-color: var(--secondary-surface-color);
     color: var(--primary-color);
 
-    font-size: 0.85rem;
+    font-size: calc(0.85rem * var(--font-scale));
     font-weight: 600;
 }
 
 .help-hero h2 {
     margin-top: 20px;
 
-    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-size: calc(clamp(1.8rem, 4vw, 3rem) * var(--font-scale));
     font-weight: 600;
 
     color: var(--text-color);
@@ -32,7 +32,7 @@
 .help-hero .description {
     margin-top: 10px;
 
-    font-size: 1rem;
+    font-size: calc(1rem * var(--font-scale));
     color: var(--text-muted-color);
 
     max-width: 600px;
@@ -73,7 +73,7 @@
 }
 
 .help-card h3 {
-    font-size: 1.2rem;
+    font-size: calc(1.2rem * var(--font-scale));
     font-weight: 600;
 
     color: var(--primary-color);
@@ -83,7 +83,7 @@
 
 .help-card p {
     color: var(--text-muted-color);
-    font-size: 0.95rem;
+    font-size: calc(0.95rem * var(--font-scale));
     line-height: 1.4;
 
     margin-bottom: 12px;
@@ -96,7 +96,7 @@
 
 .help-card ul li {
     color: var(--text-muted-color);
-    font-size: 0.95rem;
+    font-size: calc(0.95rem * var(--font-scale));
     margin-bottom: 6px;
 }
 
