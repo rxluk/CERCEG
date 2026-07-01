@@ -45,6 +45,30 @@ body {
     color: var(--text-color);
 }
 
+body.text-spacing p,
+body.text-spacing li,
+body.text-spacing a,
+body.text-spacing h1,
+body.text-spacing h2,
+body.text-spacing h3,
+body.text-spacing h4,
+body.text-spacing h5,
+body.text-spacing h6,
+body.text-spacing span,
+body.text-spacing button,
+body.text-spacing label,
+body.text-spacing input,
+body.text-spacing select,
+body.text-spacing textarea {
+    line-height: 1.5;
+    letter-spacing: 0.12em;
+    word-spacing: 0.16em;
+}
+
+body.text-spacing p {
+    margin-bottom: 2em;
+}
+
 .a11y-menu {
     position: fixed;
     top: calc(70px + 1rem);
@@ -92,6 +116,11 @@ body {
     font-weight: 700;
 
     cursor: pointer;
+}
+
+.a11y-menu__button.is-active {
+    background-color: var(--primary-color);
+    color: var(--surface-color);
 }
 
 .a11y-menu__button:hover {
