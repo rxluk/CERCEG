@@ -27,6 +27,8 @@
     font-weight: 600;
 
     color: var(--text-color);
+    max-width: 100%;
+    overflow-wrap: anywhere;
 }
 
 .help-hero .description {
@@ -35,7 +37,6 @@
     font-size: calc(1rem * var(--font-scale));
     color: var(--text-muted-color);
 
-    max-width: 600px;
     line-height: 1.5;
     text-align: left;
     max-width: 70ch;
@@ -89,6 +90,7 @@
     line-height: 1.4;
     text-align: left;
     max-width: 70ch;
+    overflow-wrap: anywhere;
 
     margin-bottom: 12px;
 }
@@ -114,6 +116,7 @@
     font-weight: 600;
     color: var(--text-color);
     text-align: left;
+    overflow-wrap: anywhere;
 
     margin-bottom: 12px;
 
@@ -141,4 +144,19 @@
 .help-card button:hover {
     background-color: var(--primary-hover-color);
     transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .help-hero {
+        padding: 3rem 1rem 1rem;
+    }
+
+    .help-cards {
+        padding: 1.5rem 1rem 3rem;
+    }
+
+    .help-card {
+        max-width: 100%;
+        width: 100%;
+    }
 }

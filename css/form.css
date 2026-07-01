@@ -24,8 +24,6 @@
     color: var(--primary-color);
 
     border-radius: 1.25rem;
-
-    font-size: 0.875rem;
     font-weight: 500;
 }
 
@@ -35,6 +33,8 @@
     color: var(--text-color);
     font-size: calc(clamp(2rem, 4vw, 4rem) * var(--font-scale));
     font-weight: 600;
+    max-width: 100%;
+    overflow-wrap: anywhere;
 }
 
 .form-hero .description {
@@ -97,6 +97,8 @@
 .form-row select,
 .form-row textarea {
     flex: 1 1 250px;
+    min-width: 0;
+    width: 100%;
 
     padding: 1rem;
 
@@ -175,4 +177,39 @@
 
 .form-buttons button:hover {
     background-color: var(--primary-hover-color);
+}
+
+@media (max-width: 768px) {
+    .form-hero {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .form-hero .left,
+    .form-hero .right,
+    .form-container {
+        width: 100%;
+    }
+
+    .form-hero .right img {
+        max-width: 100%;
+    }
+
+    .form-container {
+        padding: 0 1rem 3rem;
+    }
+
+    .form-container form {
+        padding: 1.25rem;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-buttons .back,
+    .form-buttons button {
+        width: 100%;
+    }
 }

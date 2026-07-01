@@ -31,6 +31,7 @@
 
 .hero img {
     margin-top: 5%;
+    width: 100%;
     max-width: 95%;
     height: auto;
     object-fit: contain;
@@ -57,6 +58,8 @@
     color: var(--text-color);
     font-size: calc(clamp(1rem, 6vw, 5rem) * var(--font-scale));
     font-weight: 600;
+    max-width: 100%;
+    overflow-wrap: anywhere;
 }
 
 .hero .left h1 span {
@@ -97,6 +100,7 @@
     font-weight: 600;
     border-radius: 0.5rem;
     cursor: pointer;
+    overflow-wrap: anywhere;
 }
 
 .hero .left .btn .green {
@@ -214,6 +218,8 @@
     color: var(--text-color);
     font-size: calc(70px * var(--font-scale));
     font-weight: 600;
+    max-width: 100%;
+    overflow-wrap: anywhere;
 }
 
 .about .right span {
@@ -263,6 +269,8 @@
     color: var(--text-color);
     font-size: calc(42px * var(--font-scale));
     font-weight: 600;
+    max-width: 100%;
+    overflow-wrap: anywhere;
 }
 
 .how-it-works .steps {
@@ -315,4 +323,52 @@
     font-weight: 500;
 
     background-color: var(--surface-color);
+}
+
+@media (max-width: 768px) {
+    .hero,
+    .about {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .hero .left,
+    .hero .right,
+    .about .left,
+    .about .right {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .hero .left .btn {
+        flex-direction: column;
+    }
+
+    .hero .left .btn .green,
+    .hero .left .btn .white {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .cards,
+    .how-it-works .steps {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .card,
+    .how-it-works .step {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .about .left img {
+        padding-bottom: 1.5rem;
+    }
+
+    .about .right h3,
+    .how-it-works h3 {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
 }

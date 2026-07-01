@@ -63,6 +63,8 @@ body.text-spacing textarea {
     line-height: 1.5;
     letter-spacing: 0.12em;
     word-spacing: 0.16em;
+    overflow-wrap: anywhere;
+    hyphens: auto;
 }
 
 body.text-spacing p {
