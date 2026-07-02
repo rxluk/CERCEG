@@ -134,6 +134,12 @@ body.text-spacing p {
     cursor: not-allowed;
 }
 
+:where(a, button, input, select, textarea, summary, [role="button"], [tabindex]:not([tabindex="-1"])):focus,
+:where(a, button, input, select, textarea, summary, [role="button"], [tabindex]:not([tabindex="-1"])):focus-visible {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 3px;
+}
+
 @media (max-width: 768px) {
     .a11y-menu {
         top: auto;
@@ -143,9 +149,4 @@ body.text-spacing p {
         justify-content: center;
         border-radius: 1rem;
     }
-}
-
-:focus-visible {
-    outline: 3px solid var(--focus-color);
-    outline-offset: 3px;
 }

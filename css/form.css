@@ -107,8 +107,6 @@
 
     font-family: "Inter Tight", sans-serif;
     font-size: 1rem;
-
-    outline: none;
 }
 
 .form-row textarea {
@@ -120,6 +118,8 @@
 .form-row select:focus,
 .form-row textarea:focus {
     border-color: var(--primary-color);
+    outline: 3px solid var(--focus-color);
+    outline-offset: 2px;
 }
 
 .form-row label {
