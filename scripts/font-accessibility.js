@@ -138,9 +138,33 @@
     }
 
     function createMenu() {
+        const menuId = 'accessibility-menu-panel';
+        const wrapper = document.createElement('div');
+        wrapper.className = 'accessibility-menu';
+
+        const trigger = document.createElement('button');
+        trigger.type = 'button';
+        trigger.className = 'accessibility-menu__trigger';
+        trigger.setAttribute('aria-controls', menuId);
+        trigger.setAttribute('aria-expanded', 'false');
+        trigger.setAttribute('aria-label', 'Abrir menu de acessibilidade');
+        trigger.innerHTML = `
+        <svg class="accessibility-menu__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            aria-hidden="true"
+            focusable="false">
+            <path d="M8 1a1.5 1.5 0 1 0 0 3A1.5 1.5 0 0 0 8 1z"/>
+            <path d="M4 5a.5.5 0 0 0 0 1h3v2.5L5.5 14h1.5L8 10.5 9 14h1.5L9 8.5V6h3a.5.5 0 0 0 0-1H4z"/>
+        </svg>
+        `;
+
         const menu = document.createElement('aside');
+        menu.id = menuId;
         menu.className = 'a11y-menu';
         menu.setAttribute('aria-label', 'Menu de acessibilidade');
+        menu.setAttribute('aria-hidden', 'true');
 
         menu.innerHTML = `
             <span class="a11y-menu__label">Fonte</span>
@@ -180,7 +204,17 @@
             }
         });
 
-        return menu;
+        trigger.addEventListener('click', () => {
+            const isOpen = wrapper.classList.toggle('accessibility-menu--open');
+            trigger.setAttribute('aria-expanded', String(isOpen));
+            trigger.setAttribute('aria-label', isOpen ? 'Fechar menu de acessibilidade' : 'Abrir menu de acessibilidade');
+            menu.setAttribute('aria-hidden', String(!isOpen));
+        });
+
+        wrapper.appendChild(trigger);
+        wrapper.appendChild(menu);
+
+        return wrapper;
     }
 
     function init() {

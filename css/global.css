@@ -78,12 +78,59 @@ body.text-spacing p {
     margin-bottom: 2em;
 }
 
-.a11y-menu {
+.accessibility-menu {
     position: fixed;
-    top: calc(70px + 1rem);
-    right: 1rem;
-    z-index: 999;
+    right: 24px;
+    top: calc(70px + 16px);
+    z-index: 1100;
 
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 0.75rem;
+
+    max-width: calc(100vw - 2rem);
+}
+
+.accessibility-menu__trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 0;
+
+    border: 1px solid var(--primary-color);
+    border-radius: 999px;
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+
+    cursor: pointer;
+    box-shadow: 0 8px 24px var(--shadow-color);
+    transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.accessibility-menu__icon {
+    display: block;
+    width: 1.85rem;
+    height: 1.85rem;
+    color: inherit;
+    fill: currentColor;
+}
+
+.accessibility-menu__trigger:hover {
+    background-color: var(--primary-hover-color);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 28px var(--shadow-color);
+}
+
+.a11y-menu {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -97,6 +144,20 @@ body.text-spacing p {
     border: 1px solid var(--border-color);
     border-radius: 999px;
     box-shadow: 0 8px 30px var(--shadow-color);
+
+    opacity: 0;
+    transform: translateY(0.5rem) scale(0.98);
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+}
+
+.accessibility-menu--open .a11y-menu {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .a11y-menu__label {
@@ -148,12 +209,27 @@ body.text-spacing p {
 }
 
 @media (max-width: 768px) {
-    .a11y-menu {
-        top: auto;
-        right: 0.75rem;
-        bottom: 0.75rem;
+    .accessibility-menu {
+        right: 16px;
+        top: calc(70px + 12px);
         left: 0.75rem;
+        align-items: flex-end;
+    }
+
+    .accessibility-menu__trigger {
+        width: 3.875rem;
+        height: 3.875rem;
+        font-size: 1.7rem;
+    }
+
+    .accessibility-menu__icon {
+        width: 1.65rem;
+        height: 1.65rem;
+    }
+
+    .a11y-menu {
         justify-content: center;
         border-radius: 1rem;
+        width: 100%;
     }
 }
