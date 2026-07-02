@@ -66,6 +66,10 @@ git clone https://github.com/rxluk/CERCEG.git
 ## Links
 GitHub Pages: https://rxluk.github.io/CERCEG/
 
+Entrega 1 (HTML/CSS): https://youtu.be/s866g7X_L_4
+
+Entrega 2 (JS): https://youtu.be/-jlE_eBm9B0
+
 ---
 
 ## Integrantes
