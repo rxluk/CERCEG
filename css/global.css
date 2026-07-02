@@ -16,7 +16,8 @@ html {
     --font-scale: 1;
 }
 
-.high-contrast {
+html.high-contrast,
+body.high-contrast {
     --bg-color: #000000;
     --surface-color: #000000;
     --text-color: #ffffff;
