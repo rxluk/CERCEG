@@ -72,7 +72,7 @@
 
 .help-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(30, 42, 36, 0.12);
+    box-shadow: 0 12px 40px var(--shadow-color);
 }
 
 .help-card h3 {
