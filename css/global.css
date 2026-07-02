@@ -45,6 +45,13 @@ body {
     color: var(--text-color);
 }
 
+a:visited,
+a:active {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: 0.12em;
+}
+
 body.text-spacing p,
 body.text-spacing li,
 body.text-spacing a,
