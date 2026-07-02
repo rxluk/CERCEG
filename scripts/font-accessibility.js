@@ -1,6 +1,7 @@
 (function () {
     const storageKey = 'cerceg-font-scale';
     const spacingStorageKey = 'cerceg-text-spacing';
+    const contrastStorageKey = 'cerceg-high-contrast';
     const root = document.documentElement;
     const body = document.body;
     const steps = [1, 1.25, 1.5, 1.75, 2];
@@ -53,6 +54,25 @@
         }
     }
 
+    function readStoredContrast() {
+        try {
+            return localStorage.getItem(contrastStorageKey) === 'true';
+        } catch (error) {
+            return false;
+        }
+    }
+
+    function saveContrast(enabled) {
+        try {
+            if (enabled) {
+                localStorage.setItem(contrastStorageKey, 'true');
+            } else {
+                localStorage.removeItem(contrastStorageKey);
+            }
+        } catch (error) {
+        }
+    }
+
     function getCurrentScale() {
         return normalizeScale(root.style.getPropertyValue('--font-scale') || readStoredScale());
     }
@@ -85,6 +105,14 @@
         });
     }
 
+    function updateContrastButton(enabled) {
+        document.querySelectorAll('[data-contrast-action="toggle"]').forEach((button) => {
+            button.setAttribute('aria-pressed', String(enabled));
+            button.classList.toggle('is-active', enabled);
+            button.textContent = enabled ? 'Alto contraste' : 'Alto Contraste';
+        });
+    }
+
     function changeScale(delta) {
         applyScale(getCurrentScale() + delta);
     }
@@ -95,8 +123,18 @@
         saveSpacing(enabled);
     }
 
+    function applyContrast(enabled) {
+        root.classList.toggle('high-contrast', enabled);
+        updateContrastButton(enabled);
+        saveContrast(enabled);
+    }
+
     function toggleSpacing() {
         applySpacing(!body.classList.contains('text-spacing'));
+    }
+
+    function toggleContrast() {
+        applyContrast(!root.classList.contains('high-contrast'));
     }
 
     function createMenu() {
@@ -109,14 +147,21 @@
             <button type="button" class="a11y-menu__button" data-font-action="decrease" aria-label="Diminuir fonte">A-</button>
             <button type="button" class="a11y-menu__button" data-font-action="increase" aria-label="Aumentar fonte">A+</button>
             <button type="button" class="a11y-menu__button" data-spacing-action="toggle" aria-pressed="false">Espaçamento</button>
+            <button type="button" class="a11y-menu__button" data-contrast-action="toggle" aria-pressed="false">Alto Contraste</button>
         `;
 
         menu.addEventListener('click', (event) => {
             const button = event.target.closest('[data-font-action]');
             const spacingButton = event.target.closest('[data-spacing-action]');
+            const contrastButton = event.target.closest('[data-contrast-action]');
 
             if (spacingButton) {
                 toggleSpacing();
+                return;
+            }
+
+            if (contrastButton) {
+                toggleContrast();
                 return;
             }
 
@@ -143,6 +188,7 @@
         document.body.appendChild(menu);
         applyScale(readStoredScale());
         applySpacing(readStoredSpacing());
+        applyContrast(readStoredContrast());
     }
 
     if (document.readyState === 'loading') {
